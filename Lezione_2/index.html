@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning Javascript</title>
+</head>
+<body>
+
+    <script>
+        /*'var' è stato introdotto all'inizio ma non si usa più, è preferibile 'let'*/
+
+
+        //Dichiarazione di una variabile --> Case sensitive
+        /*Possiamo usare underscore non il trattino a metà*/
+        let nome = 'Viorel';
+        let varFloat= 23.43;
+        let varBoolean = false;
+        let vettore=['Viorel', 'Virginia', 'Domenico'];
+
+        //Dichiarazione e definizione di un oggetto persona
+        let persona={
+            nome : 'Viorel',
+            cognome : 'Strogoteanu',
+            codFiscale : 'STRVRL98S26Z140L',
+            cittaNascita : 'Moldavia',
+            età : 23,
+            coloriPreferiti : [ 'verde', 'nero', 'grigio']
+        };
+
+    
+
+        //Aggiornare una variabile
+        nome='Luca';
+
+
+        /*Modo concesso
+        let nome_utente;
+        */
+        let dichiarazioneVariabileNuova;
+
+        //loggare in console quello che vogliamo
+        console.log(nome);
+        console.log(vettore);
+        console.log(vettore[1]);
+        console.log(persona.coloriPreferiti[1]);
+       // console.log(cognome);
+
+        //tipizzazione dinamica
+        /*Quando dichiariamo una variabile non siamo obbligati a dichiararne il tipo*/
+        console.log(typeof persona);
+        persona = 500;
+
+        console.log(typeof persona);
+
+        console.log(typeof nome);
+
+        //const -->non cambiano durante il tempo
+        const database = 'database::hosting.com';
+        console.log(typeof nome);
+
+        //Questo codice non può essere eseguito
+        //nome = 'database::server.com';
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ViorelS">
+    <title>Numeri e operatori matematici</title>
+</head>
+<body>
+    
+    <script>
+        //tutti i tipi di numero float, esadecimale, ecc -->sono tutti number
+        const numero=43.2626222;
+        const numero1 =43.22;
+        console.log(typeof numero);
+        console.log(typeof numero1);
+
+        //Per imporre quanti numeri dopo la virgola
+        console.log(numero.toFixed(4));
+
+        //Convertire una stringa in un numero
+        const numero2 = '43';
+        console.log(Number(numero2)+3);
+
+        //Quando sommo una stringa e un numero, tutto si trasforma in stringa
+        const numero3 = '43' + 5;
+        console.log(numero3);
+
+        //Classici operatori
+        const numero4 = 40/5;
+        console.log(numero4);
+        console.log(40%5); //resto
+
+        //Operatori di assegnazione nuovi
+        let numero5 = 50;
+        numero5 /= 7;
+        console.log(numero5.toFixed(0));
+        // "==" va a verificare che il valore sia uguale, "===" verifica che siano dello stesso tipo (?)
+        let numero6 = '8';
+        console.log(numero6==8);
+        console.log(numero6===8);
+
+
+
+    </script>
+
+</body>
+</html>
