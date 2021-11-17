@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodi utili stringhe</title>
+</head>
+<body>
+    
+    <script>
+        let stringa = "questo è un corso di javascript completo e aggiornato";
+        
+        //Lunghezza stringa
+        console.log(stringa.length);
+
+        //Prendere un carattere
+        console.log(stringa[stringa.length - 1]);
+        console.log(stringa.indexOf("corso2"));
+
+        //da dove inizia una stringa
+        let indexCorso = stringa.indexOf("corso");
+
+        //slice =  taglia da un punto fino alla fine
+        console.log(stringa.slice(indexCorso));
+
+        //slice =  taglia da un punto fino alla fine corso
+        console.log(stringa.slice(indexCorso, indexCorso+5));
+
+        //uppercase e lowercase
+        console.log(stringa.toUpperCase());
+        console.log(stringa.toLowerCase());
+
+        //Sostituire una parte di stringa
+        console.log(stringa.replace("corso", "CIAO"));
+
+    </script>
+</body>
+</html>
