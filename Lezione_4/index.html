@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ViorelsS">
+    <title>Stringhe</title>
+</head>
+
+<body>
+
+    <script>
+        //Single quotes '' --- Double quotes ""
+        let testo = "Ciao sono una stringa. \nCon i doppi apici non ci sono problemi quando mettiamo l'apostrofo";
+
+        //Single quotes --> Citazioni
+        //Double quotes --> Per usare gli apostrofi
+        //Usare sempre uno dei due modi, in modo da essere consistenti
+
+        let nome="Luca";
+        testo = "Ciao sono " + nome;
+        console.log(testo);
+
+        let nome1 = "56" + "56";
+        console.log(nome1);
+        nome1 = Number("56") + Number("56");
+        console.log(nome1);
+        nome1 = nome1.toString() + 56;
+        console.log(nome1);
+
+        //template literals: permettono di creare/inserire in una stringa delle funzioni, delle variabili
+        /* back tick = ` -->
+        */ 
+
+        let testo1 = "ciao sono una variabile"
+        let elemento = `<h1> ${testo1} bellissima</h1>`;
+        elemento = `<h1> ${2+6} bellissima</h1>`; 
+
+        document.body.innerHTML = elemento;
+
+    </script>
+</body>
+
+</html>
