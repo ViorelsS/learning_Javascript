@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condizionali</title>
+</head>
+
+<body>
+
+    <script>
+        let nome = "Luca";
+        let numero = 20;
+        if (nome == "Luca") {
+            console.log("Ciao " + nome);
+        } else if(nome == "Marco"){
+            console.log("Ciao " + nome);
+        } else if(nome == "Mario"){
+            console.log("Ciao " + nome);
+        } else{
+            console.log("Ciao " + "anonimo");
+        }
+
+        if(numero === "20"){ //il valore è uguale e anche il tipo?
+            console.log("ok");
+        }else{
+            console.log("non va bene");
+        }
+
+        //OPERATORI LOGICI IN JAVASCRIPT sono uguali al C
+        let isOnline = false;
+        if(!isOnline){
+            console.log("Non è online.");
+        }else{
+            console.log("E' online.");
+        }
+
+        //switch statement
+        switch(nome){
+            case "Luca":
+                console.log("Ciao Luca");
+                break;//serve per evitare che il codice vada avanti-->esce dallo switch
+            case "Gino":
+                console.log("Ciao Gino");
+                break;
+            case "Marco":
+                console.log("Ciao Marco");
+                break;
+            default : 
+                console.log("Non so il tuo nome");
+        }
+
+        //ternary operator
+        numero = 215;
+        nome = (numero<20)?"Luca":"Leonardo";
+        console.log(nome);
+    
+
+         
+
+
+
+    </script>
+</body>
+
+</html>
