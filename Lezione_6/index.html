@@ -12,14 +12,14 @@
 
     <script>
         //ARRAY = lista di valori
-        let arrayy=[54, 53, 67,83];
+        let arrayy = [54, 53, 67, 83];
         let data = ["Milano", "Torino", "Roma", "Venezia", "Napoli", "Palermo"];
         let citta = "Milano, Torino, Roma, Venezia, Napoli";
 
         console.log(arrayy);
-        console.log(data[data.length-1]);
+        console.log(data[data.length - 1]);
 
-        for(i=0; i<data.length;i++){
+        for (i = 0; i < data.length; i++) {
             console.log(data[i]);
         }
 
@@ -42,7 +42,22 @@
 
         data.unshift("Firenze"); //aggiunge
         console.log(data);
-        
+
+        /*
+        Se hai un vettore e vuoi togliere determinati elementi nel mezzo, dovrai passargli 
+        come primo argomento la posizione da cui partire 
+        come secondo argomento il numero di elementi che intendi 
+        togliere (incluso il primo!).
+        */
+        //togliere un elemento specifico dall'array
+        console.log("Lunghezza del vettore : " + data.length);
+        for (i = 0; i < data.length; i++) {
+            if (data[i] === "Venezia")
+                data.splice(i, 1);
+        }
+        console.log("Lunghezza del vettore : " + data.length);
+        console.log(data);
+
 
 
     </script>
