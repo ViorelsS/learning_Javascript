@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni + Funzioni Custom</title>
+</head>
+
+<body>
+
+    <style>
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <input type="text" name="nome" placeholder="nome persona">
+    <button>Saluta!</button>
+    <h1>Nessun saluto</h1>
+
+
+    <input type="text" name="numero" placeholder="numero di interesse">
+    <button>calcola il cubo!</button>
+    <h1>Nessun risultato</h1>
+
+
+    <script>
+        let nome = "Luca";
+
+        //differenza tra funzioni e metodi
+        /*
+        METODI = funzioni di un oggetto particolare
+        FUNZIONI AL DI FUORI = funzioni
+        */
+        nome.replace("Mario");
+        console.log(nome);
+
+        function ciao() {
+            let cognome = "Rossi";
+            console.log("ciao");
+            hello(cognome);
+        }
+
+        //chiamare una funzione
+        ciao();
+
+        //Funzioni anonime: funzioni che non hanno nome
+
+        /*
+        Tutte le variabili che sono nel nostro script al di fuori delle funzioni
+        sono variabili GLOBALI (utilizzabili in qualsiasi situazione)
+        SCOPE LOCALE/GLOBALE
+
+        ->Scope locale : variabile in una funzione
+        ->Scope globale :  variabile globale
+        */
+
+        function hello(name) {
+            console.log("hello : " + name);
+        }
+
+
+        ciao();
+
+        function generaTabella() {
+            generaHeader();
+            generaRighe();
+            generaFooter();
+
+            console.log("Tabella generata");
+        }
+
+
+        function generaHeader() {
+            console.log("Header generato");
+        }
+        function generaRighe() {
+            console.log("Righe generate");
+        }
+        function generaFooter() {
+            console.log("Footer generato");
+        }
+
+        generaTabella();
+
+
+
+        let button = document.querySelector("button");
+        let title = document.querySelector("h1");
+        let nome1 = document.querySelector("input");
+
+        function saluta(name = "Marco") {
+            //cambiamo il contenuto dell'h1 da "Nessun saluto" a "Ciao"+ nome
+
+            title.innerHTML = `Ciao ${name}`;
+        }
+
+        button.addEventListener("click", () => {
+            saluta(nome1.value);
+            console.log(nome1.value);
+        })
+
+        // saluta();
+
+
+        //FANNO INTERFERENZA FRA DI LORO
+
+        /*Return nelle funzioni*/
+
+        let number = document.querySelector("input");
+        function cubo(number){
+            let result = number * number * number;
+            console.log(result);
+            return result;
+        }
+
+
+        
+
+        button.addEventListener("click", ()=>{
+            title.innerHTML = cubo(number.value);
+        })
+    </script>
+
+</body>
+
+</html>
