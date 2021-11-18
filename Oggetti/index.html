@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+<body>
+    
+<script>
+    const chiave ="interessi";
+
+    const persona = {
+        // key = value
+        nome :"Luca",
+        cognome : "Rossi",
+        genere : "Maschio",
+        eta : 25,
+        interessi : ["snowboard", "basket", "picnic al parco"],
+        indirizzo: {
+            via : "Piazza Roma",
+            cap : "09872",
+            provincia : "MI",
+            città: "Milano"
+        },
+
+        //Metodo di persona
+        saluta : function(){
+            console.log(`Ciao sono ${this.nome}`);
+        }
+    }
+
+    //dot notation
+    persona.saluta();
+
+    //bracket notation
+    console.log(persona["indirizzo"]["cap"]);
+    /*persona["interessi"] è come scrivere persona.interessi*/
+
+    /*La bracket serve quando dobbiamo acquisire dati dinamicamente*/
+    console.log(persona[chiave][0]);
+
+    //la costante è la persona ma i dati interni possono cambiare
+    persona.nome = "Paolo";
+    persona.indirizzo.cap = 12300;
+    console.log(`${persona.nome} ${persona.indirizzo.cap}`);
+
+    persona.colorePreferito = "blu";
+
+    console.log(persona);
+
+</script>
+
+</body>
+</html>
