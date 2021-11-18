@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ViorelS">
+    <title>classi</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Persona {
+            constructor(nome, cognome, eta, genere, interessi) {
+                this.nome = nome;
+                this.cognome = cognome;
+                this.eta = eta;
+                this.genere = genere;
+                this.interessi = interessi;
+                this.saluta = function () {
+                    console.log(`Ciao sono ${this.nome}`);
+                }
+            }
+        }
+
+        //COSTRUTTORE DI UN INSEGNANTE
+        class Insegnante extends Persona {
+            constructor(nome, cognome, eta, genere, interessi, materia) {
+                super(nome, cognome, eta, genere, interessi);
+                this.materia = materia;
+            }
+            riprendiAlunno(nomeAlunno){
+                console.log(`${nomeAlunno} non si mangia in classe!`);
+            }
+
+            get materia(){
+                return this._materia;
+            }
+            set materia(nuovaMateria){
+                this._materia = nuovaMateria;
+            }
+
+        }
+
+        const insegnante = new Insegnante("Anna", "Blu", 32, "Femmina", ["Netflix"], "Storia");
+        insegnante.riprendiAlunno("Rossi");
+        console.log(insegnante.materia);
+        insegnante.materia = "Matematica"
+        console.log(insegnante.materia);
+        // insegnante.saluta();
+
+    </script>
+</body>
+
+</html>
