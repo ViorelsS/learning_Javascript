@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+
+<button id="date">vai</button>
+<button id="alert">Alert</button>
+
+<body>
+    <!--
+        Il codice generalmente viene letto dall'alto verso il basso in HTML/CSS
+    -->
+
+    <script>
+        /*
+        BLOCKING CODE: codice a blocchi, ogni task blocca l'esecuzione
+        fino a quando non è finito quel blocco (esempio ciclo) e gli altri
+        già pronti rimangono in attesa-->risulta lento
+        */
+
+        /*
+        Javascript è un linguaggio single-threa (singolo processo)
+        -->si è evoluto con più threads (quello che abbiamo usato fino ad ora è il main thread)
+        -->Ci sono anche i worker-threads (canali di lavorazione differenti)
+        */
+
+        const btn = document.querySelector("#date");
+        const btnAlert = document.querySelector("#alert");
+        btn.addEventListener("click", () => {
+            let myDate;
+            for (let i = 0; i < 10000000; i++) {
+                let date = new Date();
+                myDate = date;
+            }
+
+            console.log(myDate);
+
+            let pElem = document.createElement("p");
+            pElem.textContent = "This is a newly-added paragraph. ";
+            document.body.appendChild(pElem);
+        });
+
+        btnAlert.addEventListener("click", () => {
+            console.log("eccomi");
+        });
+
+    </script>
+</body>
+
+</html>

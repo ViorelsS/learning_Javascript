@@ -1,0 +1,72 @@
+[
+    {
+        "nome":"1A",
+        "numeroAlunni":21,
+        "scuolaSabato":false,
+        "scuola":"Scuola Elementare Miao",
+        "insegnanti":[
+            {
+                "nome":"Anna",
+                "cognome":"Blu",
+                "materieInsegnate":["Storia", "Italiano", "Geografia"]
+            },
+            {
+                "nome":"Ludovica",
+                "cognome":"Rossi",
+                "materieInsegnate":["Matematica", "Geometria"]
+            }
+        ],
+        "alunni":[
+            {
+                "nome":"Marco",
+                "cognome":"Qwerty"
+            },
+            {
+                "nome":"Leonardo",
+                "cognome":"Verdi"
+            },
+            {
+                "nome":"Maria",
+                "cognome":"Gialli"
+            }
+        ],
+        "orari":{
+            "mattina":["storia","matematica"],
+            "pomeriggio":["italiano","geometria"]
+        }
+    },
+    {
+        "nome":"4A",
+        "scuola":"Scuola Elementare Miao",
+        "insegnanti":[
+            {
+                "nome":"Anna",
+                "cognome":"Blu",
+                "materieInsegnate":["Storia", "Italiano", "Geografia"]
+            },
+            {
+                "nome":"Ludovica",
+                "cognome":"Rossi",
+                "materieInsegnate":["Matematica", "Geometria"]
+            }
+        ],
+        "alunni":[
+            {
+                "nome":"Marco",
+                "cognome":"Qwerty"
+            },
+            {
+                "nome":"Leonardo",
+                "cognome":"Verdi"
+            },
+            {
+                "nome":"Maria",
+                "cognome":"Gialli"
+            }
+        ],
+        "orari":{
+            "mattina":["storia","matematica"],
+            "pomeriggio":["italiano","geometria"]
+        }
+    }
+]
