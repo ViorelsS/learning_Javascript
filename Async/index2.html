@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+
+<button id="date">vai</button>
+<button id="alert">Alert</button>
+
+<body>
+    <script>
+
+        let response = fetch("https://ak.picdn.net/shutterstock/videos/11773709/thumb/10.jpg");
+        console.log(response);
+        // let blob = response.blob(); // NON FUNZIONA PERCHE' ATTUALMENTE NON HA ANCORA AVUTO UNA RISPOSTA
+
+
+        /*CALLBACK ASYNC*/
+        //blob-> bynary large object
+        function loadAsset(url, type, callback){
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", url);
+            xhr.responseType = type;
+
+            xhr.onload = function(){
+                callback(xhr.response);
+            }
+            xhr.send();
+        }
+
+        function displayImage(blob){
+            let objectURL = URL.createObjectURL(blob);
+
+            let image = document.createElement("img");
+            image.src = objectURL;
+            document.body.appendChild(image);
+        }
+
+        loadAsset("https://ak.picdn.net/shutterstock/videos/11773709/thumb/10.jpg", "blob", displayImage);
+
+        fetch("classe.json").then(function(response){
+            return response.json();
+        }).then(function(json){
+            classe = json;
+            console.log("Dati : ", classe)
+        }).catch(function(err){
+            console.log("Fetch problem: " + err.message);
+        });
+
+
+
+    </script>
+</body>
+
+</html>
